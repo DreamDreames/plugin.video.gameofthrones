@@ -16,6 +16,7 @@ def index():
     for idx, vid in enumerate(episode.vids):
         li = xbmcgui.ListItem('第{}集'.format(idx + 1))
         url = plugin_url + '?act=play&vid=' + vid
+        li.setProperty('IsPlayable', 'true')
         xbmcplugin.addDirectoryItem(handle, url, li, False)
 
     xbmcplugin.endOfDirectory(handle)

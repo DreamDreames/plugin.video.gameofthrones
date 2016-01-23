@@ -4,6 +4,7 @@ import sys
 import urlparse
 import xbmcplugin
 import xbmcgui
+import resources.vids as vids
 
 plugin_url = sys.argv[0]
 handle = int(sys.argv[1])
@@ -12,13 +13,11 @@ params = dict(urlparse.parse_qsl(sys.argv[2].lstrip('?')))
 __play_url__ = r'http://cache.tv.qq.com/qqplayerout.swf?vid='
 
 def index():
-    with open('vid.txt') as f:
-        vids = f.readlines()
-        for idx, rawvid in enumerate(vids):
-            vid = rawvid.strip('\n')
-            li = xbmcgui.ListItem('第{}集'.format(idx))
-            url = plugin_url + '?act=play&vid=' + vid
-            xbmcplugin.addDirectoryItem(handle, url, li, True)
+    for idx, rawvid in vids:
+        vid = rawvid.strip('\n')
+        li = xbmcgui.ListItem('第{}集'.format(idx))
+        url = plugin_url + '?act=play&vid=' + vid
+        xbmcplugin.addDirectoryItem(handle, url, li, True)
 
     xbmcplugin.endOfDirectory(handle)
 

@@ -14,7 +14,7 @@ __play_url__ = r'http://cache.tv.qq.com/qqplayerout.swf?vid='
 
 def index():
     for idx, vid in enumerate(episode.vids):
-        li = xbmcgui.ListItem('第{}集'.format(idx))
+        li = xbmcgui.ListItem('第{}集'.format(idx + 1))
         url = plugin_url + '?act=play&vid=' + vid
         xbmcplugin.addDirectoryItem(handle, url, li, True)
 
@@ -23,7 +23,8 @@ def index():
 def play():
     link = __play_url__ + params['vid']
     play_item = xbmcgui.ListItem(path=link)
-    xbmcplugin.setResolvedUrl(handle, True, listitem=play_item)
+    play_item.setProperty('IsPlayable', 'true')
+    xbmcplugin.setResolvedUrl(handle, True, play_item)
 
 {
     'index': index,

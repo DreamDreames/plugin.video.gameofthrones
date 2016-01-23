@@ -4,6 +4,7 @@ import sys
 import urlparse
 import xbmcplugin
 import xbmcgui
+import xbmc
 import resources.vids as episode
 
 plugin_url = sys.argv[0]
@@ -24,8 +25,9 @@ def index():
 def play():
     link = __play_url__ + params['vid']
     play_item = xbmcgui.ListItem(path=link)
-    play_item.setProperty('IsPlayable', 'true')
-    xbmcplugin.setResolvedUrl(handle, True, play_item)
+    play_item.setInfo(type='Video', infoLabels={'Title':'Play'})
+    xbmc.Player().play(link, play_item)
+    #xbmcplugin.setResolvedUrl(handle, True, play_item)
 
 {
     'index': index,

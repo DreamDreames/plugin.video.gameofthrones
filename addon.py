@@ -6,7 +6,7 @@ import xbmcplugin
 import xbmcgui
 
 plugin_url = sys.argv[0]
-handle = int(sys.arg[1])
+handle = int(sys.argv[1])
 params = dict(urlparse.parse_qsl(sys.argv[2].lstrip('?')))
 
 __play_url__ = r'http://cache.tv.qq.com/qqplayerout.swf?vid='

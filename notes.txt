@@ -1,0 +1,44 @@
+# url of the video copied from the browser
+http://v.qq.com/page/y/v/h/y0016tj0qvh.html
+http://cache.tv.qq.com/qqplayerout.swf?vid=y0016tj0qvh
+
+# write logs in xbmc
+xbmc.log("[PLUGIN] Initialized %s v%s using Python: %s'" % (__plugin__, __version__, sys.version), level=xbmc.LOGNOTICE)
+
+# a link to get video link?
+http://vv.video.qq.com/geturl?vid=c001640aimv&otype=xml&platform=1&ran=0%2E9652906153351068
+
+# api to get the video host server and file name
+http://vv.video.qq.com/getinfo?vids=c001640aimv&otype=json&defaultfmt=fhd
+
+# Output of getinfo api
+QZOutputJson={"exem":0,"fl":{"cnt":5,"fi":[{"br":64,"id":1,"lmt":0,"name":"flv","sb":1,"sl":0},{"br":64,"id":2,"lmt":0,"name":"mp4","sb":1,"sl":1},{"br":1500,"id":10201,"lmt":0,"name":"shd","sb":1,"sl":0},{"br":500,"id":10202,"lmt":0,"name":"hd","sb":1,"sl":0},{"br":64,"id":10203,"lmt":0,"name":"sd","sb":1,"sl":0}]},"hs":0,"ls":0,"preview":3281,"s":"o","sfl":{"cnt":0},"tm":1453731868,"vl":{"cnt":1,"vi":[{"br":60,"ch":0,"cl":{"fc":0,"keyid":"c001640aimv.2"},"fclip":0,"fmd5":"b15a484de8a203579635d810237a1e90","fn":"c001640aimv.mp4","fs":205012879,"fst":5,"fvkey":"76E5C24C3EBC5FC62553D23CD2B6BA1187E0593443FCB86896DACDC65428ED7C003AFECF1405DADD1C286949213A5876C6A3792EDE0FDCF87F918F6E980669EF5A0F5935495DF4501CE41572890E63B5ACC1436C319F93F6","level":20,"lnk":"c001640aimv","logo":1,"pl":[{"cnt":2,"pd":[{"c":10,"cd":10,"fmt":40001,"fn":"q1","h":45,"r":10,"url":"http://video.qpic.cn/video_caps/0/","w":80},{"c":5,"cd":10,"fmt":40002,"fn":"q2","h":90,"r":5,"url":"http://video.qpic.cn/video_caps/0/","w":160}]}],"share":1,"sp":0,"st":2,"td":"3282.14","ti":"权力的游戏_04","type":1036,"ul":{"ui":[{"dt":2,"dtc":10,"url":"http://111.202.98.157/vlive.qqvideo.tc.qq.com/","vt":203},{"dt":2,"dtc":10,"url":"http://111.202.98.152/vlive.qqvideo.tc.qq.com/","vt":203},{"dt":2,"dtc":10,"url":"http://video.dispatch.tc.qq.com/","vt":0}]},"vh":352,"vid":"c001640aimv","videotype":2,"vw":640}]}};
+
+# a link generated from the getinfo api
+stack://http://111.202.98.154/video.dispatch.tc.qq.com/c001640aimv.p201.1.mp4?vkey=935D7F3245F5980D133F22AD9C4B49E20D87B2814BF4758EEC03CF138213A350BBD2C732E70B8948910CFC68F11FE623E22C53A33259FB26EF699ECAB7A728B5951DAED6147E2D0C83A38449B5BFD5AED0405460CDE68B4A&locid=e03a3a53-abec-45e8-9a35-529736b1188f&size=39017499&ocid=2637239724
+
+
+
+# references:
+# 腾讯视频（qq）外站视频对应地址获取思路
+http://www.ckplayer.com/bbs/forum.php?mod=viewthread&tid=15166
+
+# 自己做腾讯视频真实地址解析分析
+http://blog.csdn.net/th362cn/article/details/8610044
+
+# 腾讯视频下载地址解析(**)
+http://www.voidcn.com/blog/mowangmm/article/p-4461390.html
+
+# 腾讯视频下载地址解析(***)
+http://tacy.github.io/blog/2014/01/14/QQ-video-download-url/
+https://github.com/tacy/plugin.video.youkuvideo/blob/master/addon.py
+
+# ［实战XBMC插件开发］之牛刀小试－－一个简单的电视直播插件
+http://www.hdpfans.com/thread-394829-1-1.html
+
+# XBMC 视频插件开发入门教程
+http://www.7po.com/thread-441577-1-1.html
+
+# Kodi official document Add-on development
+http://kodi.wiki/view/Add-on_development
+

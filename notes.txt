@@ -1,3 +1,8 @@
+# TODOS
+1. play speed too slow. looks like the vkey not correct?
+2. concate multiple video files as one playlist
+3. in browser, getvinfo is used. How to get the ckey?
+ 
 # url of the video copied from the browser
 http://v.qq.com/page/y/v/h/y0016tj0qvh.html
 http://cache.tv.qq.com/qqplayerout.swf?vid=y0016tj0qvh
@@ -16,7 +21,6 @@ QZOutputJson={"exem":0,"fl":{"cnt":5,"fi":[{"br":64,"id":1,"lmt":0,"name":"flv",
 
 # a link generated from the getinfo api
 stack://http://111.202.98.154/video.dispatch.tc.qq.com/c001640aimv.p201.1.mp4?vkey=935D7F3245F5980D133F22AD9C4B49E20D87B2814BF4758EEC03CF138213A350BBD2C732E70B8948910CFC68F11FE623E22C53A33259FB26EF699ECAB7A728B5951DAED6147E2D0C83A38449B5BFD5AED0405460CDE68B4A&locid=e03a3a53-abec-45e8-9a35-529736b1188f&size=39017499&ocid=2637239724
-
 
 
 # references:
